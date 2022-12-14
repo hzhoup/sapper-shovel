@@ -9,11 +9,20 @@
     "*.{vue,js,ts,jsx,tsx,md}": "prettier --write",
     "*.{vue,js,ts,jsx,tsx}": "eslint --fix"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "engines": {
     "node": ">= 16",
     "pnpm": ">= 7.18"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
+    "commitizen": "^4.2.6",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
