@@ -2,10 +2,24 @@
   "private": true,
   "packageManager": "^pnpm@7.18.0",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md}": "prettier --write",
+    "*.{vue,js,ts,jsx,tsx}": "eslint --fix"
   },
   "engines": {
     "node": ">= 16",
     "pnpm": ">= 7.18"
+  },
+  "devDependencies": {
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "husky-init": "^8.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1"
   }
 }
