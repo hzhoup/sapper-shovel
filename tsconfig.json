@@ -1,3 +1,6 @@
 {
-  "references": [{ "path": "./packages/shovel-cli/tsconfig.json" }]
+  "references": [
+    { "path": "./packages/shovel-cli/tsconfig.json" },
+    { "path": "./packages/shovel-vue/tsconfig.json" }
+  ]
 }
