@@ -1,0 +1,5 @@
+packages/shovel-cli/lib
+
+*/.packages.json
+*/.md
+*.yaml

@@ -1,0 +1,27 @@
+{
+  "name": "@shovel/cli",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "bin": {
+    "shovel-cli": "./lib/bin.js"
+  },
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "execa": "^6.1.0",
+    "fs-extra": "^11.1.0",
+    "ora": "^6.1.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13"
+  }
+}

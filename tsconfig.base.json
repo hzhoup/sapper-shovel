@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES2018",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {},
+    "sourceMap": false,
+    "moduleResolution": "NodeNext",
+    "allowJs": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "removeComments": false
+  }
+}

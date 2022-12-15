@@ -3,6 +3,7 @@
   "packageManager": "^pnpm@7.18.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
+    "lint": "shovel-cli lint",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "@shovel/cli": "workspace:*",
     "@shovel/eslint-config": "workspace:*",
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "^3.3.0",
