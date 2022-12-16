@@ -93,7 +93,8 @@ export const publish = async (options) => {
          * 检查 git 工作空间 是否为空
          */
         if (!(await isWorkTreeEmpty())) {
-            logger.error('Git WorkTree');
+            logger.error('Git WorkTree is Not Empty');
+            return;
         }
         if (!(await confirmRefs(options.remote))) {
             return;
