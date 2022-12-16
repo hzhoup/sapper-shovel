@@ -18,7 +18,7 @@ const isWorkTreeEmpty = async () => {
 const confirmRefs = async (remote = 'origin') => {
     var _a;
     const { stdout } = await execa('git', ['remote', '-v']);
-    const reg = new RegExp(`${remote}\t(.*) \\(push)`);
+    const reg = new RegExp(`${remote}\t(.*) \\(push`);
     const repo = (_a = stdout.match(reg)) === null || _a === void 0 ? void 0 : _a[1];
     const { stdout: branck } = await execa('git', ['branch', '--show-current']);
     const name = 'Refs confirm';
@@ -93,8 +93,7 @@ export const publish = async (options) => {
          * 检查 git 工作空间 是否为空
          */
         if (!(await isWorkTreeEmpty())) {
-            logger.error('Git WorkTree is not Empty, Please commit changed');
-            return
+            logger.error('Git Worktree');
         }
         if (!(await confirmRefs(options.remote))) {
             return;

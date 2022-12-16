@@ -22,7 +22,7 @@ const isWorkTreeEmpty = async () => {
 
 const confirmRefs = async (remote = 'origin') => {
   const { stdout } = await execa('git', ['remote', '-v'])
-  const reg = new RegExp(`${remote}\t(.*) \\(push)`)
+  const reg = new RegExp(`${remote}\t(.*) \\(push`)
   const repo = stdout.match(reg)?.[1]
   const { stdout: branck } = await execa('git', ['branch', '--show-current'])
 
