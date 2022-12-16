@@ -10,7 +10,6 @@ node_modules
 
 # Bundle
 dist
-lib
 coverage
 packages/element-plus/version.ts
 
