@@ -18,4 +18,12 @@ program
     return lint()
   })
 
+program.on('command:*', async ([cmd]) => {
+  const { default: logger } = await import('./shared/logger.js')
+
+  program.outputHelp()
+  logger.error(`\nUnknown Command ${cmd}.\n`)
+  process.exit(1)
+})
+
 program.parse()
