@@ -1,9 +1,11 @@
 {
   "private": true,
+  "version": "0.0.1",
   "packageManager": "^pnpm@7.18.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "lint": "shovel-cli lint",
+    "publish": "node scripts/publish.mjs && shovel-cli publish",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -24,14 +26,17 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@shovel/cli": "workspace:0.0.1",
     "@shovel/eslint-config": "workspace:*",
+    "@types/node": "^18.11.15",
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "execa": "^6.1.0",
     "husky": "^8.0.0",
     "husky-init": "^8.0.0",
     "lint-staged": "^13.1.0",
+    "ora": "^6.1.2",
     "prettier": "^2.8.1",
     "typescript": "^4.9.4"
   }

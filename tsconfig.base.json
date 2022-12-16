@@ -3,8 +3,6 @@
     "outDir": "dist",
     "target": "ES2018",
     "module": "ESNext",
-    "baseUrl": ".",
-    "paths": {},
     "sourceMap": false,
     "moduleResolution": "NodeNext",
     "allowJs": true,
