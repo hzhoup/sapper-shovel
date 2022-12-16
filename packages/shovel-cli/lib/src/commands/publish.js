@@ -20,13 +20,13 @@ const confirmRefs = async (remote = 'origin') => {
     const { stdout } = await execa('git', ['remote', '-v']);
     const reg = new RegExp(`${remote}\t(.*) \\(push`);
     const repo = (_a = stdout.match(reg)) === null || _a === void 0 ? void 0 : _a[1];
-    const { stdout: branck } = await execa('git', ['branch', '--show-current']);
+    const { stdout: branch } = await execa('git', ['branch', '--show-current']);
     const name = 'Refs confirm';
     const ret = await prompt([
         {
             name,
             type: 'confirm',
-            message: `Current Refs ${repo}:refs/for/${branck}`,
+            message: `Current Refs ${repo}:refs/for/${branch}`,
         },
     ]);
     return ret[name];
@@ -50,9 +50,9 @@ const confirmVersion = async (cur, exp) => {
     return ret.name;
 };
 const updateVersion = (version) => {
-    const packageJsons = glob.sync('packages/*/package.json');
-    packageJsons.push('package.json');
-    packageJsons.forEach((path) => {
+    const packageFilePaths = glob.sync('packages/*/package.json');
+    packageFilePaths.push('package.json');
+    packageFilePaths.forEach((path) => {
         const file = resolve(CWD, path);
         const config = readJSONSync(file);
         config.version = version;
@@ -93,7 +93,7 @@ export const publish = async (options) => {
          * 检查 git 工作空间 是否为空
          */
         if (!(await isWorkTreeEmpty())) {
-            logger.error('Git Worktree');
+            logger.error('Git WorkTree');
         }
         if (!(await confirmRefs(options.remote))) {
             return;
