@@ -6,5 +6,11 @@
   "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vue": "^3.2.45"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
 }
