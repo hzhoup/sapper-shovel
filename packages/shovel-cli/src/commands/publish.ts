@@ -56,7 +56,7 @@ const confirmVersion = async (cur: string, exp: string) => {
   const ret = await prompt([
     { name, type: 'confirm', message: `All packages version ${cur} -> ${exp}` },
   ])
-  return ret.name
+  return ret[name]
 }
 
 const updateVersion = (version: string) => {
