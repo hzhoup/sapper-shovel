@@ -42,7 +42,7 @@ const confirmRegistry = async () => {
   const { stdout } = await execa('npm', ['config', 'get', 'registry'])
   const name = 'Registry confirm'
   const ret = await prompt([{ name, type: 'confirm', message: `Current registry is: ${stdout}` }])
-  return ret.name
+  return ret[name]
 }
 
 const getReleaseType = async (): Promise<ReleaseType> => {
