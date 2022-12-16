@@ -22,7 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
-    "@shovel/cli": "workspace:*",
+    "@shovel/cli": "workspace:0.0.1",
     "@shovel/eslint-config": "workspace:*",
     "commitizen": "^4.2.6",
     "cz-conventional-changelog": "^3.3.0",

@@ -4,10 +4,14 @@
   "description": "",
   "type": "module",
   "bin": {
-    "shovel-cli": "./lib/bin.js"
+    "shovel-cli": "./lib/src/bin.js"
   },
   "main": "./lib/index.js",
   "module": "./lib/index.js",
+  "files": [
+    "lib",
+    "tsconfig.json"
+  ],
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc"
