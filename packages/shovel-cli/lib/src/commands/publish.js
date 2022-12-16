@@ -47,7 +47,7 @@ const confirmVersion = async (cur, exp) => {
     const ret = await prompt([
         { name, type: 'confirm', message: `All packages version ${cur} -> ${exp}` },
     ]);
-    return ret.name;
+    return ret[name];
 };
 const updateVersion = (version) => {
     const packageFilePaths = glob.sync('packages/*/package.json');
