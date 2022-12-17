@@ -4,9 +4,7 @@
   "type": "module",
   "description": "shovel-plus example for react",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "keywords": [],
   "author": "",
