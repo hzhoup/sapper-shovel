@@ -7,9 +7,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "vue": "^3.2.45"
-  },
   "peerDependencies": {
     "vue": "^3.2.0"
   }
