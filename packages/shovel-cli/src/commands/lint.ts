@@ -18,7 +18,7 @@ export const lint = async () => {
       '--fix',
       '--cache',
       '--ext',
-      ESLINT_EXTENSIONS.join(),
+      ESLINT_EXTENSIONS.join()
     ])
     const type = stdout ? 'warn' : 'succeed'
     spinner[type](stdout || 'Eslint Successful')

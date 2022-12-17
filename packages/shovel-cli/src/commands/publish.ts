@@ -31,8 +31,8 @@ const confirmRefs = async (remote = 'origin') => {
     {
       name,
       type: 'confirm',
-      message: `Current Refs ${repo}:refs/for/${branch}`,
-    },
+      message: `Current Refs ${repo}:refs/for/${branch}`
+    }
   ])
 
   return ret[name]
@@ -54,7 +54,7 @@ const getReleaseType = async (): Promise<ReleaseType> => {
 const confirmVersion = async (cur: string, exp: string) => {
   const name = 'Version confirm'
   const ret = await prompt([
-    { name, type: 'confirm', message: `All packages version ${cur} -> ${exp}` },
+    { name, type: 'confirm', message: `All packages version ${cur} -> ${exp}` }
   ])
   return ret[name]
 }

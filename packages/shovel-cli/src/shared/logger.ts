@@ -15,5 +15,5 @@ export default {
   },
   title(text: string) {
     console.log(chalk.cyan(text))
-  },
+  }
 }
