@@ -1,8 +1,8 @@
 {
-  "name": "example-vue",
+  "name": "example-react",
   "version": "0.0.2",
   "type": "module",
-  "description": "shovel-plus example for vue",
+  "description": "shovel-plus example for react",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.0.0"
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "react-dom": "^18.2.0"
   }
 }
